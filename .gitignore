@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Build & coverage outputs
+dist/
+build/
+coverage/
+
+# Deployment & IDE caches
+.vercel/
+.firebase/
+.agents/
+backups/
+
+# Logs & certificates
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+
+# OS generated files
+.DS_Store
+Thumbs.db

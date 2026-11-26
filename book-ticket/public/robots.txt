@@ -1,0 +1,31 @@
+# ============================================================
+# Khaleeji Tour — Robots.txt
+# https://www.robotstxt.org/robotstxt.html
+# ============================================================
+
+# 1. Rules for all web crawlers
+User-agent: *
+Allow: /
+Allow: /events/*
+Allow: /how-it-works
+Allow: /assets/*
+Allow: /logo.png
+
+# Disallow Private & Admin APIs and Routes
+Disallow: /admin/*
+Disallow: /my-tickets*
+Disallow: /booking/*
+Disallow: /api/*
+Disallow: /login*
+Disallow: /register*
+Disallow: /forgot-password*
+Disallow: /reset-password*
+Disallow: /verify-email*
+Disallow: /email-confirmed*
+
+# 2. Rules for Google Image Bot (Ensure event posters & images are indexed)
+User-agent: Googlebot-Image
+Allow: /
+
+# 3. XML Sitemap Location
+Sitemap: https://www.khaleejitour.com/sitemap.xml
