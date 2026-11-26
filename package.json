@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd book-ticket && npm install && npm run build",
+    "build": "cd frontend && npm install && npm run build",
     "start": "cd back-end && npm start",
-    "dev": "cd book-ticket && npm run dev"
+    "dev": "cd frontend && npm run dev"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.110.8",

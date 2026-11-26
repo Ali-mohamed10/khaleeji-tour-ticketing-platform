@@ -14,14 +14,14 @@
 
 ```bash
 npm install
-cd book-ticket && npm install --legacy-peer-deps
+cd frontend && npm install --legacy-peer-deps
 cd ../back-end && npm install
 ```
 
 2. Create local `.env` files from the provided templates:
 
 ```bash
-cp book-ticket/.env.example book-ticket/.env
+cp frontend/.env.example frontend/.env
 cp back-end/.env.example back-end/.env
 ```
 
@@ -32,12 +32,12 @@ cp back-end/.env.example back-end/.env
 cd back-end && npm run dev
 
 # Terminal 2
-cd book-ticket && npm run dev
+cd frontend && npm run dev
 ```
 
 ## Available Scripts
 
-### Frontend (`book-ticket/`)
+### Frontend (`frontend/`)
 - `npm run dev` — Start Vite development server (`http://localhost:5173`)
 - `npm run build` — Build production bundle + run `scripts/generate-seo.js`
 - `npm run lint` — Run `oxlint`
@@ -51,5 +51,5 @@ cd book-ticket && npm run dev
 
 ## Troubleshooting
 
-- **Seat map cleanup or checkout fails locally**: Ensure `back-end` is running on port `3001` and `VITE_API_BASE_URL=http://localhost:3001` is set in `book-ticket/.env`.
+- **Seat map cleanup or checkout fails locally**: Ensure `back-end` is running on port `3001` and `VITE_API_BASE_URL=http://localhost:3001` is set in `frontend/.env`.
 - **SEO post-build skips Supabase**: If `VITE_SUPABASE_URL` or `VITE_SUPABASE_ANON_KEY` is not set, `generate-seo.js` safely generates static pages without failing the build.

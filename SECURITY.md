@@ -15,7 +15,7 @@ If you discover a security vulnerability in this repository, please report it re
   - Frontend variables prefixed with `VITE_` (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_STRIPE_PUBLISHABLE_KEY`) are intentionally public client identifiers.
   - Private credentials (`SUPABASE_SERVICE_ROLE_KEY`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `RESEND_API_KEY`, `CRON_SECRET`) must only be configured in server/Vercel environment variables and never exposed to the client bundle.
 - **Database Access Control**:
-  - Client-side Supabase queries are governed by PostgreSQL Row-Level Security (RLS) policies defined in `book-ticket/src/lib/migrations/`.
+  - Client-side Supabase queries are governed by PostgreSQL Row-Level Security (RLS) policies defined in `frontend/src/lib/migrations/`.
   - Privileged operations execute through `supabaseAdmin` inside server-side endpoints.
 - **Role-Based Access Control (RBAC)**:
   - Admin and gate-staff endpoints (`/api/manual-booking`, `/api/tickets/verify`, `/api/tickets/event-attendees`) verify the caller's Supabase JWT Bearer token and check their role in `profiles`.

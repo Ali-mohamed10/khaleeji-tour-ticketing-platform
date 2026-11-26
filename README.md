@@ -44,7 +44,7 @@ flowchart LR
   Webhook -->|"QR Ticket Email"| Resend["Resend Email API"]
 ```
 
-- **Frontend (`book-ticket/`)** communicates directly with Supabase for public reads and authenticated user queries protected by PostgreSQL Row-Level Security (RLS), while all privileged operations (checkout, webhook processing, manual offline bookings, ticket verification) run exclusively on the server.
+- **Frontend (`frontend/`)** communicates directly with Supabase for public reads and authenticated user queries protected by PostgreSQL Row-Level Security (RLS), while all privileged operations (checkout, webhook processing, manual offline bookings, ticket verification) run exclusively on the server.
 - **Serverless API (`api/`)** exposes Vercel Serverless Functions backed by shared business services in `back-end/services/`, middleware in `back-end/middleware/`, and email templates in `back-end/templates/`.
 
 ---
@@ -60,7 +60,7 @@ flowchart LR
 │   ├── utils/                    # Pricing & QR payload utilities
 │   ├── tests/                    # Backend unit tests (node --test)
 │   └── server.js                 # Local Express development server
-├── book-ticket/                  # React 19 + Vite frontend application
+├── frontend/                     # React 19 + Vite frontend application
 │   ├── public/                   # Static assets, robots.txt, seat-map SVGs
 │   ├── scripts/                  # Post-build SEO pre-renderer & sitemap generator
 │   ├── src/
@@ -105,7 +105,7 @@ flowchart LR
 npm install
 
 # Install frontend dependencies
-cd book-ticket && npm install --legacy-peer-deps
+cd frontend && npm install --legacy-peer-deps
 
 # Install backend dependencies
 cd ../back-end && npm install
@@ -116,7 +116,7 @@ cd ../back-end && npm install
 Copy the example templates and provide your own test credentials:
 
 ```bash
-cp book-ticket/.env.example book-ticket/.env
+cp frontend/.env.example frontend/.env
 cp back-end/.env.example back-end/.env
 ```
 
@@ -124,7 +124,7 @@ See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for the complete list of variable
 
 ### 3. Database Setup
 
-Apply the SQL migrations in `book-ticket/src/lib/migrations/` sequentially in your Supabase SQL Editor. See [docs/DATABASE.md](docs/DATABASE.md) for schema and RLS details.
+Apply the SQL migrations in `frontend/src/lib/migrations/` sequentially in your Supabase SQL Editor. See [docs/DATABASE.md](docs/DATABASE.md) for schema and RLS details.
 
 ### 4. Run Locally
 
@@ -133,7 +133,7 @@ Apply the SQL migrations in `book-ticket/src/lib/migrations/` sequentially in yo
 cd back-end && npm run dev
 
 # Terminal 2: Start Vite frontend (http://localhost:5173)
-cd book-ticket && npm run dev
+cd frontend && npm run dev
 ```
 
 ---
@@ -142,7 +142,7 @@ cd book-ticket && npm run dev
 
 ```bash
 # Frontend lint, unit tests, and production build
-cd book-ticket
+cd frontend
 npm run lint
 npm test
 npm run build
@@ -176,7 +176,7 @@ Application screenshots are pending sanitized capture in `docs/screenshots/` (ex
 ## Author
 
 - **Name**: Ali Mohamed
-- **Role**: Frontend Developer
+- **Role**: Full-Stack Developer
 - **Portfolio**: [https://ali-dev400.vercel.app/](https://ali-dev400.vercel.app/)
 
 ---

@@ -5,7 +5,7 @@ Thank you for your interest in contributing. Please follow these guidelines to k
 ## Development Workflow
 
 1. Create a feature or fix branch from `main`.
-2. Copy `book-ticket/.env.example` and `back-end/.env.example` to `.env` with local/test credentials only.
+2. Copy `frontend/.env.example` and `back-end/.env.example` to `.env` with local/test credentials only.
 3. Follow the project coding conventions:
    - Functional React components with Hooks only.
    - Keep business logic out of UI components; use hooks, services, and server handlers.
@@ -14,7 +14,7 @@ Thank you for your interest in contributing. Please follow these guidelines to k
 4. Ensure all checks pass before opening a pull request:
 
 ```bash
-cd book-ticket && npm run lint && npm test && npm run build
+cd frontend && npm run lint && npm test && npm run build
 cd ../back-end && npm run lint && npm test
 ```
 

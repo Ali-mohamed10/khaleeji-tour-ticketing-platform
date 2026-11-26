@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: book-ticket
+        working-directory: frontend
 
     steps:
       - name: Checkout repository
@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: book-ticket/package-lock.json
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install dependencies
         run: npm ci --legacy-peer-deps

@@ -6,7 +6,7 @@ Khaleeji Tour uses a split **React SPA + Serverless API + Supabase PostgreSQL** 
 
 ```mermaid
 flowchart TB
-  subgraph Client["Frontend (book-ticket / React 19 + Vite)"]
+  subgraph Client["Frontend (frontend / React 19 + Vite)"]
     UI["Pages & Components"]
     Hooks["TanStack Query & Custom Hooks"]
     Services["Frontend Services (Supabase + Axios)"]
@@ -33,7 +33,7 @@ flowchart TB
   BizServices --> Resend
 ```
 
-## Frontend Architecture (`book-ticket/src/`)
+## Frontend Architecture (`frontend/src/`)
 
 - **`pages/`**: Route-level components organized by domain (`events/`, `booking/`, `tickets/`, `auth/`, `admin/`, `legal/`, `errors/`), lazy-loaded via `React.lazy` and `Suspense` in `App.jsx` (with `HomePage` eager-loaded).
 - **`components/`**: Presentational and feature components (`ui/`, `common/`, `layout/`, `seatmap/`, `booking/`, `events/`, `press-conference/`, `tickets/`, `admin/`, `auth/`).

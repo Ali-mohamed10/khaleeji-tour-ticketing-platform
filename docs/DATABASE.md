@@ -1,6 +1,6 @@
 # Database Schema & Migrations
 
-Khaleeji Tour uses **Supabase PostgreSQL** with Row-Level Security (RLS) and atomic PL/pgSQL RPCs. All schema changes are tracked sequentially in `book-ticket/src/lib/migrations/` (`001_profiles.sql` through `036_performance_indexes_and_thumbnails.sql`).
+Khaleeji Tour uses **Supabase PostgreSQL** with Row-Level Security (RLS) and atomic PL/pgSQL RPCs. All schema changes are tracked sequentially in `frontend/src/lib/migrations/` (`001_profiles.sql` through `036_performance_indexes_and_thumbnails.sql`).
 
 ## Core Tables
 

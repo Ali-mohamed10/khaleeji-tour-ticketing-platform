@@ -4,8 +4,8 @@ Khaleeji Tour is configured for deployment on **Vercel** via `vercel.json`.
 
 ## Vercel Configuration
 
-- **Build Command**: `cd book-ticket && npm install --legacy-peer-deps && npm run build`
-- **Output Directory**: `book-ticket/dist`
+- **Build Command**: `cd frontend && npm install --legacy-peer-deps && npm run build`
+- **Output Directory**: `frontend/dist`
 - **Serverless Functions**: Automatically discovered from `/api/**/*.js`
 - **Cron Jobs**: `/api/cron/expire-reservations` scheduled daily (`0 0 * * *`)
 
