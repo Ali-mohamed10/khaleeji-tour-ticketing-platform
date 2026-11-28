@@ -154,12 +154,13 @@ npm test
 ```
 
 ---
-
+<!--
 ## Screenshots
 
 Application screenshots are pending sanitized capture in `docs/screenshots/` (excluding customer PII, payment details, and live QR codes).
 
 ---
+-->
 
 ## Documentation
 
